@@ -1,0 +1,68 @@
+function setup() {
+  createCanvas(255, 255);
+}
+
+var ball = 0
+var ballSpeed = 10
+var ballDirection = ballSpeed
+var ballDiameter = 50
+var ballColor = 1
+
+var ball2 = 0
+var ballSpeed2 = 5
+var ballDirection2 = ballSpeed2
+var ballDiameter2 = 30
+var ballColor2 = 1
+
+var ball3 = 0
+var ballSpeed3 = 1
+var ballDirection3 = ballSpeed3
+var ballDiameter3 = 50
+var ballColor3 = 1
+
+
+function draw() {
+  background(220);
+  noStroke()
+  fill(255, ball + ballColor, 0);
+  ellipse(width / 2, ball, ballDiameter); //yellow ball
+
+  fill(0, ball2 + ballColor2, 255)
+  ellipse(100, ball2, ballDiameter2); //purple ball
+  
+  fill(ball3 + ballColor3, 100, ball3 + ballColor3)
+  ellipse(ball3, 50, ballDiameter3); //purple ball
+
+  ball = ball + ballDirection;
+  ball2 = ball2 + ballDirection2;
+  ball3 = ball3 + ballDirection3;
+  // print(ball)
+  
+  if (ball >= height) {
+    print("OFF THE SCREEN")
+    ballDirection = 0 - ballSpeed //right
+  }
+
+  if (ball <= 0) {
+    print("OFF THE SCREEN")
+    ballDirection = ballSpeed //left
+  }
+
+
+  if (ball2 >= height) {
+    ballDirection2 = 0 - ballSpeed2
+  }
+
+  if (ball2 <= 0) {
+    ballDirection2 = ballSpeed2
+  }
+  
+  
+  if (ball3 >= height) {
+    ballDirection3 = 0 - ballSpeed3
+  }
+
+  if (ball3 <= 0) {
+    ballDirection3 = ballSpeed3
+  }
+}
