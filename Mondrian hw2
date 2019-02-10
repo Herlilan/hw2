@@ -1,0 +1,41 @@
+function setup() {
+	createCanvas(400, 400);
+  frameRate(20)
+  background(255);
+}
+
+function draw() {
+  
+	noStroke();
+	strokeCap(SQUARE);
+
+  
+	fill(mouseX, 83, mouseY, 50);
+	rect(random(-5,5), random(-5,5), 190, 190); // orange rec
+
+	fill(mouseY, random(0, 255), random(0,255), 50);
+	rect((mouseX - 25), (mouseY - 65), 50, 130); // yellow rec
+  
+	fill(42, mouseX, 148, 50);
+	rect(random(185, 195), random(265, 275), 110, 110); // blue rec
+  
+	strokeWeight(10);
+  stroke(0);
+  
+	line(0, 190, width, 190); // top horizontal
+  line(0, 270, width, 270); // 2nd horizontal
+  line(190, 380, 300, 380); // 3rd horizontal
+  line(50, 270, 50, 399); // left vertical
+  line(190, 0, 190, height); //2nd vertical
+  line(300, 270, 300, 399); //3rd vertical
+}
+
+function mousePressed() {
+ 	background(255);
+  line(0, 190, width, 190); // top horizontal
+  line(0, 270, width, 270); // 2nd horizontal
+  line(190, 380, 300, 380); // 3rd horizontal
+  line(50, 270, 50, 399); // left vertical
+  line(190, 0, 190, height); //2nd vertical
+  line(300, 270, 300, 399); //3rd vertical
+}
