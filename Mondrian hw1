@@ -1,0 +1,51 @@
+function setup() {
+	createCanvas(400, 400);
+}
+
+
+
+function draw() {
+  var topH = 180;
+  var secH = 0;
+  var fifH = 45;
+  var lefV = 100;
+  var midV = 0;
+  var rightV = 300;
+  var broY = mouseY + 85;
+  var greY = 300 - mouseX;
+  var orgX = 180 - mouseX;
+
+	background(133, 156, 183);
+	noStroke();
+	strokeCap(SQUARE);
+
+	fill(200, 83, 52);
+	rect(orgX, midV, 220, 250, mouseX); // orange rec
+
+	fill(149, 167, 180);
+	rect(mouseX, midV, topH, lefV, mouseX); // grey rec lt
+	rect(mouseX, greY, 45, 100, mouseX); // grey rec lb
+  rect(topH, mouseY, 120, 85, mouseX); // grey rec mr
+  
+	fill(11, 25, 80);
+	rect(secH, lefV, fifH, 200); // blue rec
+  
+  fill(0)
+  rect(fifH, 335, 135, 80); //black rec
+  
+  fill(163, 171, 157)
+  rect(topH, broY, 120, 80, mouseX);
+
+	strokeWeight(12);
+	stroke(mouseX);
+	line(45, 100, 45, 399); // left vertical
+	line(180, mouseX, 180, height); // middle vertical
+	line(300, 250, 300, 399); // right vertical
+  line(180, 15, 399, 15); //top horizontal
+  line(mouseX, 100, 180, 100); //2nd horizontal
+  line(mouseX, 250, 399, 250); //3rd horizontal
+  line(mouseX, 300, 45, 300); //4th horizontal
+  line(45, 335, 300, 335); //5th horizontal
+  
+
+}
